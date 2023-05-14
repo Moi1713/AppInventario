@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Control de Inventario</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">PDM115</string>
+    <string name="nav_header_subtitle">Control de Inventario</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Llenar BD</string>
+
+    <!-- Fragments de Prueba -->
+    <string name="menu_home">Inicio</string>
+    <string name="menu_home1">Inventario - Inicio</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <!-- Fragments de mantenimientos -->
+    <string name="menu_equipo">Equipo</string>
+    <string name="menu_docentes">Préstamo</string>
+    <string name="menu_clas_equipo">Clasificación de Equipo</string>
+
+    <!-- Titulo de Activities: Clasificacion de Equipo -->
+    <string name="title_activity_clas_equipo_insertar">ClasEquipoInsertarActivity</string>
+    <string name="title_activity_clas_equipo_eliminar">ClasEquipoEliminarActivity</string>
+    <string name="title_activity_clas_equipo_actualizar">ClasEquipoActualizarActivity</string>
+    <string name="title_activity_clas_equipo_consultar">ClasEquipoConsultarActivity</string>
+
+    <!-- Insertar -->
+
+    <string name="idclasequipo">Id</string>
+    <string name="descrclasequipo">Descripcion</string>
+
+    <string name="insertar">Insertar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="eliminar2">EliminarV2</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="consultar">Consultar</string>
+
+    <string name="opciones">Opciones:</string>
+    <string name="limpiar">Limpiar</string>
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
