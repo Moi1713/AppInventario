@@ -1,13 +1,10 @@
 package sv.edu.ues.eisi.proyecto1;
 
-import android.app.ListActivity;
-import android.content.ActivityNotFoundException;
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.SortedListAdapterCallback;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,9 +19,14 @@ public class EquipoFragment extends Fragment implements AdapterView.OnItemClickL
     String[] menu={"Insertar Registro","Eliminar Registro","Consultar Registro", "Actualizar Registro"};
     String[] activities={"EquipoInsertarActivity","EquipoEliminarActivity","EquipoConsultarActivity", "EquipoActualizarActivity"};
 
+    //para poder llamar al activity
+    Activity context;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // context para llamar al activity desde el navigation drawer
+        context = getActivity();
+
         View view = inflater.inflate(R.layout.fragment_equipo, container, false);
 
         return view;
@@ -35,7 +37,7 @@ public class EquipoFragment extends Fragment implements AdapterView.OnItemClickL
         super.onViewCreated(view, savedInstanceState);
 
         ListView listView = (ListView) view.findViewById(R.id.lst_equipo);
-        listView.setBackgroundColor(Color.rgb(244,235,190));
+        listView.setBackgroundColor(Color.rgb(244, 235, 190));
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(),android.R.layout.simple_list_item_1, menu);
 
         listView.setAdapter(adapter);
@@ -49,19 +51,11 @@ public class EquipoFragment extends Fragment implements AdapterView.OnItemClickL
 
         try{
             Class<?> clase = Class.forName("sv.edu.ues.eisi.proyecto1."+nombreValue);
-            //Intent inte = new Intent(Intent.ACTION_SENDTO, Uri.parse("sv.edu.ues.eisi.proyecto1."+nombreValue));
-            //this.startActivity(inte);
-
-            Intent i = new Intent(getActivity(), clase);
-            startActivity(i);
-
-
-        }catch (ActivityNotFoundException e) {
-            e.printStackTrace();
+            Intent inte = new Intent(context, clase);
+            this.startActivity(inte);
         }catch(ClassNotFoundException e){
             e.printStackTrace();
         }
-
 
     }
 }

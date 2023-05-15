@@ -12,6 +12,18 @@
         android:theme="@style/Theme.Proyecto1"
         tools:targetApi="31">
         <activity
+            android:name=".EquipoConsultarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EquipoEliminarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EquipoActualizarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EquipoInsertarActivity"
+            android:exported="false" />
+        <activity
             android:name=".ClasEquipoConsultarActivity"
             android:exported="false" />
         <activity
@@ -23,7 +35,6 @@
         <activity
             android:name=".ClasEquipoInsertarActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true"

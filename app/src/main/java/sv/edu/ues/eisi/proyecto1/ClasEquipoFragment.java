@@ -1,13 +1,10 @@
 package sv.edu.ues.eisi.proyecto1;
 
 import android.app.Activity;
-import android.app.ListActivity;
 import android.content.Intent;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.SortedListAdapterCallback;
 
 import android.view.LayoutInflater;
 import android.view.View;
